@@ -1,0 +1,44 @@
+/************************************************************
+ *  Stylesheet for TÆT PÅ DK
+ ************************************************************/
+
+/* GENERELLE NOTER:
+    - Denne CSS-fil indeholder alle stilregler for TÆT PÅ DK's hjemmeside.
+    - Har brugt kommentarer til at opdele sektioner og forklare hvad de forskellige css-styles gør.
+    - Har brugt BEM (Block Element Modifier) som metodologi til navngivning af classes.
+    - Farver, skrifttyper og andre designvalg er baseret på TÆT PÅ DK's styletile. Hvis der ikke var angivet noget i styletile, er valg blevet taget baseret på egne vurderinger for at nå et sammenhængende design til deadlinen.
+*/
+
+/* --------------------------------------------------------
+ - GENERELLE INDSTILLINGER FOR SIDEN
+ ---------------------------------------------------------- */
+
+
+/* --------------------------------------------------------
+ - TEKST
+ ---------------------------------------------------------- */
+
+
+/* --------------------------------------------------------
+ - KNAPPER
+ ---------------------------------------------------------- */
+
+
+/* --------------------------------------------------------
+ - SEKTIONER, CONTAINERE OG KOLONNER
+ ---------------------------------------------------------- */
+
+
+/* --------------------------------------------------------
+ - HEADER OG TOPNAVIGATION
+ ---------------------------------------------------------- */
+
+
+ /* --------------------------------------------------------
+ - FOOTER OG SLUTNAVIGATION
+ ---------------------------------------------------------- */
+
+ 
+  /* --------------------------------------------------------
+ - REGLER FOR RESPONSIVT DESIGN
+ ---------------------------------------------------------- */

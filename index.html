@@ -36,17 +36,17 @@
     <main> <!-- Hovedindholdet på siden, uden f.eks. header, menu og footer -->
 
         <!-- SEKTION: HERO START --> 
-        <section> <!-- Et section tag repræsenterer en sektion af indhold, i dette tilfælde vores hero-sektion  -->
-            <div> <!-- Div omfavner indhold som vi gerne vil have stylet/positioneret på en bestemt måde --->
+        <section class="hero"> <!-- Et section tag repræsenterer en sektion af indhold, i dette tilfælde vores hero-sektion  -->
+            <div class="sektion"> <!-- Div omfavner indhold som vi gerne vil have stylet/positioneret på en bestemt måde --->
                 <h1> <!-- H1 er hovedoverskriften som vises på siden, max. EN H1 per side --->
                 Oplev Danmark tæt på
                 </h1> 
-                
+            
                 <p> <!-- P=parapgraf. Bruges til at omfavne og dele brødtekst op i klumper, "paragrafer" --->
-                Find og book lokale og bæredygtige oplevelser og ophold i hele landet.
+                Find og book lokale, bæredygtige oplevelser og ophold i hele landet.
                 </p>
 
-                <div> <!-- DIV til styling og positionering af de to CTA-knapper -->
+                <div class="hero__ctas"> <!-- DIV til styling og positionering af de to CTA-knapper -->
                     <a class="knap--cta" href="#oplevelser">Se oplevelser</a>
                     <a class="knap--cta" href="#ophold">Find ophold</a>
                 </div> <!-- /SLUT: Div CTA-knapper -->
@@ -57,14 +57,14 @@
 
         <!-- SEKTION: OPLEVELSER START-->
         <section id="oplevelser">
-        <div> <!-- START: Container for sektion -->
+        <div class="sektion"> <!-- START: Container for sektion -->
 		        <h2> <!-- Overskrift -->
 			    Oplevelser nær dig
 		        </h2>
 
-            <div> <!-- START: Kolonner til galleri med product cards -->
+            <div class="kolonner"> <!-- START: Kolonner til galleri med product cards -->
             <!-- PRODUKT 1 -->    
-                <article> <!-- Article-tag anbefales til at markere product cards, altså produktpræsentationer -->
+                <article class="product-card"> <!-- Article-tag anbefales til at markere product cards, altså produktpræsentationer -->
 				<img src="img/oplevelse-vin.jpg" alt="Vinsmagning på Bælum Gård"> <!-- Produktbillede -->
                 <h3> <!-- Underoverskrift -->
 					Vinsmagning på Bælum Gård
@@ -78,7 +78,7 @@
 			</article>
 
             <!-- PRODUKT 2 --> 
-			<article>
+			<article class="product-card">
 				<img src="img/oplevelse-sejl.jpg" alt="Sejltur langs Køge kyst"> <!-- Produktbillede -->
 				<h3> <!-- Underoverskrift -->
 					Sejltur langs Køge kyst
@@ -92,7 +92,7 @@
 			</article>
 
             <!-- PRODUKT 3 --> 
-			<article>
+			<article class="product-card">
 				<img src="img/oplevelse-mad.jpg" alt="Madlavningskursus"> <!-- Produktbillede -->
 				<h3> <!-- Underoverskrift -->
 					Madlavning på Papirøen
@@ -106,7 +106,7 @@
 			</article>
 		    </div> <!-- /SLUT: Kolonner til galleri med product cards -->
             
-            <div> <!-- START: Container til positionering af CTA -->
+            <div class="sektion__cta"> <!-- START: Container til positionering af CTA -->
 			    <a class="knap--cta" href="#"><!-- CTA-knap for sektionen -->
 				Find flere oplevelser
 			    </a> 
@@ -118,14 +118,14 @@
 
         <!-- SEKTION: OPHOLD START-->
         <section id="ophold">
-        <div> <!-- START: Container for sektion -->
+        <div class="sektion"> <!-- START: Container for sektion -->
             <h2> <!-- Overskrift -->
 			Bæredygtige ophold
 		    </h2>
 
-            <div> <!-- START: Kolonner til galleri med product cards -->
+            <div class="kolonner"> <!-- START: Kolonner til galleri med product cards -->
             <!-- PRODUKT 1 --> 
-			<article>
+			<article class="product-card">
 				<img src="img/ophold-bornholm.jpg" alt="BnB på Bornholm"> <!-- Produktbillede -->
 				<h3> <!-- Underoverskrift -->
 					Bornholm
@@ -139,7 +139,7 @@
 			</article>
 			
             <!-- PRODUKT 2 --> 
-            <article>
+            <article class="product-card">
 				<img src="img/ophold-shelter.jpg" alt="Overnatning i shelter"> <!-- Produktbillede -->
 				<h3> <!-- Underoverskrift -->
 					Overnatning i shelter
@@ -153,7 +153,7 @@
 			</article>
 			
             <!-- PRODUKT 3 --> 
-             <article>
+             <article class="product-card">
 				<img src="img/ophold-skov.jpg" alt="Skovhytte Møns Klint"> <!-- Produktbillede -->
 				<h3> <!-- Underoverskrift -->
 					Skovhytte ved Møns Klint
@@ -167,7 +167,7 @@
 			</article>
 		    </div> <!-- /SLUT: Kolonner til galleri med product cards -->
 
-		    <div>  <!-- START: Container til positionering af CTA -->
+		    <div class="sektion__cta">  <!-- START: Container til positionering af CTA -->
 			    <a class="knap--cta" href="#"> <!-- CTA-knap for sektionen -->
 				Se alle ophold
 			    </a>
@@ -179,17 +179,17 @@
 
         <!-- SEKTION: TILBUD START-->
         <section>
-        <div><!-- START: Container for sektion -->
+        <div class="sektion"><!-- START: Container for sektion -->
 		    <h2> <!-- Overskrift -->
 			Last minute tilbud
 		    </h2>
         
-		<div> <!-- START: Kolonner til galleri med product cards -->
+		<div class="kolonner"> <!-- START: Kolonner til galleri med product cards -->
 			<!-- PRODUKT 1 --> 
-            <article>
+            <article class="product-card">
 				<img src="img/tilbud-weekend.jpg" alt="Tilbud weekend"> <!-- Produktbillede -->
 				<h3> <!-- Underoverskrift -->
-					Weekend-ophold på kro
+					Weekendophold på kro
 				</h3>
 				<p> <!-- Brødtekst med pris/beskrivelse -->
 					Fra 600 kr. per nat for to personer
@@ -200,7 +200,7 @@
 			</article>
 
             <!-- PRODUKT 2 --> 
-			<article>
+			<article class="product-card">
 				<img src="img/tilbud-sauna.jpg" alt="Tilbud saunagus"> <!-- Produktbillede -->
 				<h3> <!-- Underoverskrift -->
 					Saunagus i indre by
@@ -214,7 +214,7 @@
 			</article>
 
             <!-- PRODUKT 3 --> 
-			<article>
+			<article class="product-card">
 				<img src="img/tilbud-ridning.jpg" alt="Tilbud ridning"> <!-- Produktbillede -->
 				<h3> <!-- Underoverskrift -->
 					Ridning langs "Camønoen"
@@ -228,7 +228,7 @@
 			</article>
 		    </div> <!-- /SLUT: Kolonner til galleri med product cards -->
 
-		    <div> <!-- START: Container til positionering af CTA -->
+		    <div class="sektion__cta"> <!-- START: Container til positionering af CTA -->
 			    <a class="knap--cta" href="#"> <!-- CTA-knap for sektionen -->
 				Se alle tilbud
 			    </a>
@@ -240,7 +240,7 @@
 
         <!-- SEKTION: KUNDEANMELDELSER START--> 
         <section>  
-        <div><!-- START: Container for sektion -->
+        <div class="sektion"><!-- START: Container for sektion -->
 		    <h2> <!-- Overskrift -->
 		    Det siger vores brugere på Trustpilot
 		    </h2>
@@ -255,7 +255,95 @@
     <!-- /INDHOLD SLUT --> 
 
     <!-- FOOTER START --> 
-    <footer> <!-- Footer bruges i bunden af en side til at vise det med småt: Kontaktinfo, copyrights og sekundær navigation, som f.eks. links til forretningsbetingelser -->   
+    <footer class="footer"> <!-- Footer bruges i bunden af en side til at vise det med småt: Kontaktinfo, copyrights og sekundær navigation, som f.eks. links til forretningsbetingelser -->
+    <div>
+		<div class="kolonner"> <!-- START: Kolonner i footer -->
+			<section>
+				<h2> <!-- Overskrift-->
+					Tæt på DK ApS
+				</h2>
+				<address>  
+					Albertslundgade 97
+                    <br> <!-- Linjeskift-->
+                    5400 Brøndby
+					<br>
+                    <a href="tel:+4552789847">+ 45 5278 9847</a>
+                    <br> 
+					<a href="mailto:hej@taetpaa.dk">hej@taetpaa.dk</a>
+                    <br> 
+                    CVR: 12345678
+                </address>
+			</section>
+			<nav>
+				<h2> <!-- Overskrift-->
+					Om Tæt på DK
+				</h2>
+				<ul>
+					<li>
+						<a href="om-os.html">
+						Om os
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Kontakt
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						FAQ
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Vilkår og betingelser
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Persondatapolitik
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Cookieindstillinger
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<section>
+				<h2> <!-- Overskrift-->
+					Find os
+				</h2>
+				<ul>
+					<li>
+						<a href="#">
+						Facebook
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Instagram
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Trustpilot
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Nyhedsbrev
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div> <!-- /SLUT: Kolonner i footer -->
+		<p>
+			© 2025 Tæt på DK
+		</p>
+	</div>   
+        
 
     </footer>
     <!-- /FOOTER SLUT --> 

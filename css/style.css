@@ -7,6 +7,13 @@
     - Har brugt kommentarer til at opdele sektioner og forklare hvad de forskellige css-styles gør.
     - Har brugt BEM (Block Element Modifier) som metodologi til navngivning af classes.
     - Farver, skrifttyper og andre designvalg er baseret på TÆT PÅ DK's styletile. Hvis der ikke var angivet noget i styletile, er valg blevet taget baseret på egne vurderinger for at nå et sammenhængende design til deadlinen.
+    Kridhvid: #ffffff
+    Sort: #000000
+    Ben-hvid: #F6F3E9
+    Skov-grøn: #324F3A
+    Løv-grøn: #B6AF8C
+    Gylden: #CEAF6A
+    Himmel-blå: #728999
 */
 
 /* --------------------------------------------------------
@@ -23,6 +30,39 @@
  - KNAPPER
  ---------------------------------------------------------- */
 
+ /* KNAPPER */
+.knap { /* Normal tilstand */
+  background-color: #F6F3E9;      /* Baggrundsfarve på knap: ben-hvid */
+  color: #324F3A;                 /* Knap tekstfarve: skov-grøn */
+  border: 1px solid transparent;    /* Kant på knap */
+  border-color: #324F3A;          /* Kant-farve: skov-grøn */
+  text-decoration: none;            /* Fjerner understregning af teksten på links */
+  display: inline-block;            /* Gør at knap kan have bredde og højde */
+  padding: .75rem 1rem;             /* Afstand inde i knap, top/bund og venstre/højre */
+  border-radius: .5rem;             /* Afrundede hjørner på knap */
+}
+.knap:hover, .knap:focus, .knap:active {  /* Aktiv tilstand */
+  background-color: #B6AF8C;      /* Baggrundsfarve på knap: løv-grøn */
+  color: #324F3A;                 /* Knap tekstfarve: skov-grøn */
+  border-color: #324F3A;          /* Kant-farve: skov-grøn */
+} 
+
+ /* CTA-KNAPPER */
+.knap--cta { /* Normal tilstand */
+  background-color: #324F3A;      /* Baggrundsfarve på knap: skov-grøn */
+  color: #ffffff;                 /* Knap tekstfarve: kridhvid */
+  border: 1px solid transparent;    /* Kant på knap */
+  border-color: #324F3A;          /* Kant-farve: skov-grøn */
+  text-decoration: none;            /* Fjerner understregning af teksten på links */
+  display: inline-block;            /* Gør at knap kan have bredde og højde */
+  padding: .75rem 1rem;             /* Afstand inde i knap, top/bund og venstre/højre */
+  border-radius: .5rem;             /* Afrundede hjørner på knap */
+}
+.knap--cta:hover, .knap--cta:focus, .knap--cta:active {  /* Aktiv tilstand */
+  background-color: #728999;      /* Baggrundsfarve på knap: himmel-blå */
+  color: #ffffff;                 /* Knap tekstfarve: kridhvid */
+  border-color: #728999;          /* Kant-farve: himmel-blå */
+} 
 
 /* --------------------------------------------------------
  - SEKTIONER, CONTAINERE OG KOLONNER
@@ -38,7 +78,7 @@
  - FOOTER OG SLUTNAVIGATION
  ---------------------------------------------------------- */
 
- 
+
   /* --------------------------------------------------------
  - REGLER FOR RESPONSIVT DESIGN
  ---------------------------------------------------------- */

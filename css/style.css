@@ -5,7 +5,7 @@
 /* GENERELLE NOTER:
     - Denne CSS-fil indeholder alle stilregler for TÆT PÅ DK's hjemmeside.
     - Har brugt kommentarer til at opdele sektioner og forklare hvad de forskellige css-styles gør.
-    - Har brugt BEM (Block Element Modifier) som metodologi til navngivning af classes.
+    - Har forsøgt at bruge BEM (Block Element Modifier) som metodologi til navngivning af varianter af classes.
     - Farver, skrifttyper og andre designvalg er baseret på TÆT PÅ DK's styletile. Hvis der ikke var angivet noget i styletile, er valg blevet taget baseret på egne vurderinger for at nå et sammenhængende design til deadlinen.
     Kridhvid: #ffffff
     Sort: #000000
@@ -20,11 +20,78 @@
  - GENERELLE INDSTILLINGER FOR SIDEN
  ---------------------------------------------------------- */
 
+/* Alt under * resetter universelle indstillinger. Bør bruges sparsomt for ikke at gøre designet tungt og clunky */
+
+* {
+  box-sizing: border-box;          /* Gør padding/border forudsigelige */
+  margin: 0;                       /* Fjerner default margin */
+}
+
+/* Alt under html indstiller sidens adfærd  */
+html {
+  font-size: 175%;                 /* Gør tekststørrelsen skalerbar for accessibility-indstillinger, ideelt for den ældre målgruppe. */
+  scroll-behavior: smooth;         /* Sikrer rolig scrolling til ankerlinks på siden */
+}
+
+/* Alt under body bestemmer standardindstillinger som sidens indhold skal arve automatisk  */
+body {
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Skrifttype */
+  line-height: 1.5;                /* Halvanden linjehøjde for god læsbarhed */
+  color: #111111;                /* Sort som standard tekstfarve */
+  background: #ffffff;           /* Kridhvid som standard baggrundsfarve */
+}
 
 /* --------------------------------------------------------
  - TEKST
  ---------------------------------------------------------- */
 
+/* Indstillinger for overskrifter */
+h1, h2, h3, h4, h5, h6{
+  line-height: 1.2; /* Højde på linje */
+  font-weight: 700; /* Gør teksten fed */
+  margin: 0.8rem 0; /* Tilføjer lidt luft før og efter */
+}
+h1 { font-size: 2.75rem; }     
+h2 { font-size: 2rem; }   
+h3 { font-size: 1.5rem; }   
+h4 { font-size: 1.25rem; }  
+h5 { font-size: 1.20rem; }  
+h6 { font-size: 1.1rem; }      
+
+/* Indstillinger for brødtekst */
+p, li{
+  font-size: 1rem;           /* Standard tekststørrelse */
+  margin: 0.8rem 0;          /* Tilføjer lidt luft før og efter */
+}
+
+/* Indstillinger for links */
+a {
+  color: inherit;            /* Arver farve fra omgivende tekst */
+}
+a:hover, a:focus {
+  text-decoration: none;     /* Fjerner understregning af link ved hover/fokus  */
+}
+
+/* Juster tekststørrelse på større skærme  */
+@media (min-width: 768px) {
+  html { font-size: 125%; }  
+}
+
+/* Bryd meget lange ord op, hvis de fylder mere end deres containers bredde */
+p, li, h1, h2, h3, h4, h5, h6, a{
+  overflow-wrap: anywhere; 
+  
+}
+
+/* --------------------------------------------------------
+ - BILLEDER
+ ---------------------------------------------------------- */
+
+img{  
+  max-width: 100%;        /* Regel: Et billede må maks fylde 100% af dens containers bredde */
+  height: auto;           /* bevar proportioner */
+  display: block;         /* undgå inline-gap under img */
+}
 
 /* --------------------------------------------------------
  - KNAPPER
@@ -42,9 +109,9 @@
   border-radius: .5rem;             /* Afrundede hjørner på knap */
 }
 .knap:hover, .knap:focus, .knap:active {  /* Aktiv tilstand */
-  background-color: #B6AF8C;      /* Baggrundsfarve på knap: løv-grøn */
-  color: #324F3A;                 /* Knap tekstfarve: skov-grøn */
-  border-color: #324F3A;          /* Kant-farve: skov-grøn */
+  background-color: #728999;      /* Baggrundsfarve på knap: himmel-blå */
+  color: #ffffff;                 /* Knap tekstfarve: kridhvid */
+  border-color: #728999;          /* Kant-farve: himmel-blå */
 } 
 
  /* CTA-KNAPPER */
@@ -59,26 +126,120 @@
   border-radius: .5rem;             /* Afrundede hjørner på knap */
 }
 .knap--cta:hover, .knap--cta:focus, .knap--cta:active {  /* Aktiv tilstand */
-  background-color: #728999;      /* Baggrundsfarve på knap: himmel-blå */
-  color: #ffffff;                 /* Knap tekstfarve: kridhvid */
-  border-color: #728999;          /* Kant-farve: himmel-blå */
+  background-color: #B6AF8C;      /* Baggrundsfarve på knap: løv-grøn */
+  color: #000000;                 /* Knap tekstfarve: sort */
+  border-color: #B6AF8C;          /* Kant-farve: løv-grøn */
 } 
 
 /* --------------------------------------------------------
- - SEKTIONER, CONTAINERE OG KOLONNER
+ - BEHOLDERE: SEKTIONER, KOLONNER OG PRODUCT CARDS
  ---------------------------------------------------------- */
 
+/* Sektion: Sætter en max bredde og centrerer alt inde i sektionen */
+.sektion{
+  width: min(100%, 1200px);   /* Maks 1200px, ellers 100% */
+  margin-inline: auto;        /* Centrerer sektion */
+  padding: 2rem 1rem;         /* Luft over og under sektion */
+}
+.sektion__cta{ margin-top: 1rem; text-align: center; }   /* Centrerer CTA-knap i bunden af sektioner */   
+
+/* Kolonner: Lav 1 kolonne på mobil, men 3 på desktop */
+.kolonner{
+  display: grid;                        /* Aktiverer grid */
+  grid-template-columns: 1fr;           /* 1 kolonne som standard (som er mobil) */
+  gap: 1rem;                            /* Afstand mellem elementer */
+}
+@media (min-width: 768px) {             /* Regel: Juster ved skærmbredde på mindst 768px */
+  .kolonner{
+    grid-template-columns: repeat(3, 1fr);  /* 3 kolonner på desktop */
+    gap: 2rem;}                             /* Vandret og lodret afstand mellem kolonnerne */
+}
+
+/* Product cards: til at vise tilbud som separate produkter */
+.product-card{
+  background: #F6F3E9;        /* Baggrundsfarve: ben-hvid */
+  border: 1px solid #B6AF8C;  /* Kant-farve: løv-grøn */
+  border-radius: .5rem;         /* Afrundede hjørner */
+  padding: 1rem;                /* Indvendig afstand */
+  text-align: center;           /* Centrerer inhold */
+}
+.product-card img{
+  width: 100%;             /* Sørger for at billedet fylder hele bredden af product card */
+  aspect-ratio: 4 / 3;     /* Sørger for ens højde-bredde-forhold på billeder i card */
+  object-fit: cover;       /* Sørger for at billeder ikke bliver forvrænget, når de tilpasses */
+  border-radius: .5rem;    /* Giver billederne afrundede hjørner */
+}
 
 /* --------------------------------------------------------
  - HEADER OG TOPNAVIGATION
  ---------------------------------------------------------- */
 
 
+/* --------------------------------------------------------
+ - HERO
+ ---------------------------------------------------------- */
+
+.hero{
+  background-image: url('../img/hero-billede.jpg');  /* Kalder på baggrundsbillede */
+  background-size: cover;                   /* Dækker hele området m. baggrunden */
+  background-position: center;              /* Centrer baggrund */
+  background-color: rgba(0, 0, 0, 0.2);   /* Sætter baggrund til 20% sort */
+  background-blend-mode: multiply;          /* Blender baggrundsfarven med baggrundsbilledet */
+  min-height: 70vh;              /* Sætter minimumhøjde på hero til 70% af viewport */
+  display: flex;                 /* Gør hero til flex-container og muliggør positionering */
+  align-items: center;           /* Vertikal centrering af indhold */
+  justify-content: center;       /* Horisontal centrering af indhold */
+  text-align: center;            /* Centrerer tekst inde i hero */
+}
+.hero h1{
+  color: #ffffff;              /* Overskrift farve: kridhvid */
+  font-weight: 900;              /* Gør teksten tyk */
+}
+.hero p{
+  color: #F6F3E9;              /* ben-hvid brødtekst */;
+  font-weight: 500;              /* Gør teksten tyk */
+}
+
+/* Knap-gruppe i hero */
+.hero__ctas{
+  display: flex;                 /* Gør knap-gruppe til flex-containe og muliggør positionering */
+  justify-content: center;       /* Centrerer knapperne */
+  gap: .75rem;                   /* Afstand mellem knapperne */
+  flex-wrap: wrap;               /* Tillader knapper at bryde til ny linje på mindre skærme */
+  margin: 1.5rem 0;              /* Luft over og under knap-gruppen */
+}
+
  /* --------------------------------------------------------
  - FOOTER OG SLUTNAVIGATION
  ---------------------------------------------------------- */
 
+.footer {
+  background: #F6F3E9; /* Footer farve: ben-hvid */
+  color: #111111;      /* Footer tekst farve: sort */
+  padding: 2rem 1rem;    /* Luft over og under footer */
+  text-align: center;    /* Centrerer tekst i footer */
+}
+.footer a {
+  color: inherit;           /* Footer link farve: arver fra omgivende tekst */
+  text-decoration: none;    /* Fjerner understregning af link */
+}
+.footer a:hover, .footer a:focus {
+  text-decoration: underline; /* Understreger link ved hover/fokus */
+}
+.footer ul {
+  list-style: none;          /* Fjerner standard punktopstilling */
+  margin: 0;                 /* Fjern default margins */
+  padding: 0;                /* Fjern left indent så centrering ser rigtigt ud */
+}
+.footer ul li {
+  margin: 0 0;               /* Bestemmer luft mellem listeelementer */
+}
+.footer h2 {
+  font-size: 1.2rem;         /* Størrelse på overskrift i footer */
+  margin-bottom: 1rem;       /* Luft under overskrift i footer */
+}
+footer address{ 
+  font-style: normal; 
+}
 
-  /* --------------------------------------------------------
- - REGLER FOR RESPONSIVT DESIGN
- ---------------------------------------------------------- */
+

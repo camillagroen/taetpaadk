@@ -288,8 +288,41 @@ img{
 }
 
   
-  
 
+ /* --------------------------------------------------------
+ - ANMELDELSER
+ ---------------------------------------------------------- */
+ 
+.anmeldelser{
+  background: #F6F3E9;          /* Baggrundsfarve: skov-grøn */
+  
+}
+
+/* Styling af card med anmeldelse */
+.anmeldelser figure{
+  padding: 1rem;                /* Tilføjer luft */
+  border: 1px solid #B6AF8C;
+  border-radius: .5rem;
+  background: #Fff;
+}
+
+/* Putter anmelders billede + navn/dato på én linje */
+.anmeldelser figcaption{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #324F3A;
+}
+
+/* Indstillinger for anmelders billede */
+.anmeldelser figcaption img{
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+  
  /* --------------------------------------------------------
  - FOOTER OG SLUTNAVIGATION
  ---------------------------------------------------------- */

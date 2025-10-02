@@ -1,11 +1,249 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
+<!---------------------------------------------------------- 
+ -  Om os-side på TÆT PÅ DK 
+ ---------------------------------------------------------->
+
+<!DOCTYPE html> <!-- Type af dokument  -->
+<html lang="da"> <!-- Sprog på siden -->
+
+<!-- HEAD START -->
+<head> <!-- Head er alt, som browseren har brug for at vide, som brugeren ikke skal se -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om os</title>
-</head>
-<body>
     
+    <link rel="stylesheet" href="css/style.css"> <!-- Kalder på eksternt stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Kalder på ekstern Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <title>Tæt på DK – Om os</title> <!-- Titel i browserfanen -->
+    
+</head>
+<!-- /HEAD SLUT -->
+
+<!-- BODY START -->
+<body> <!-- Body er alt, som brugeren skal se i browseren -->
+    
+    <!-- HEADER START -->
+    <header> <!-- Header repræsenterer det øverste element i et HTML-dokument, typisk banner med navigation -->
+        <nav class="top-nav"> <!-- Nav repræsenterer navigationen på siden -->
+			<a href="index.html">
+			<img class="top-nav__logo" src="img/logo.png" alt="Tæt på DK">
+			</a>
+			
+			<details class="burger-details">  <!-- Details/summary brugt til at opnå burgermenu-funktion -->
+				<summary class="burger-summary">
+				☰ 
+				</summary>
+				<ul>
+					<li>🔐 
+						<a href="#">
+						Log ind
+						</a>
+					</li>
+					<li>🌿 
+						<a href="#">
+						Oplevelser
+						</a>
+					</li>
+					<li>🛏️ 
+						<a href="#">
+						Ophold
+						</a>
+					</li>
+					<li>🏷️ 
+						<a href="#">
+						Aktuelle tilbud
+						</a>
+					</li>
+					<li>👥 
+						<a href="om-os.html">
+						Om os
+						</a>
+					</li>
+				</ul>
+			</details>
+        </nav>
+    </header> 
+    <!-- /HEADER SLUT --> 
+
+    <!-- INDHOLD START --> 
+    <main> <!-- Hovedindholdet på siden, uden f.eks. header, menu og footer -->
+
+        <!-- SEKTION: HERO START --> 
+        <section class="hero" style="background-image:url('img/om-os.jpg')"> 
+            <div class="sektion--hero"> <!-- Div omfavner indhold som vi gerne vil have stylet/positioneret på en bestemt måde --->
+                <h1> <!-- H1 er hovedoverskriften som vises på siden, max. EN H1 per side --->
+                Mød os
+                </h1> 
+            
+                <p> <!-- P=parapgraf. Bruges til at omfavne og dele brødtekst op i klumper, "paragrafer" --->
+                Kom bare helt tæt på. Vi bidder ikke ... med mindre du er et snobrød
+                </p>
+            </div> <!-- /SLUT: Container for hero-indhold -->
+        </section>
+        <!-- /SEKTION: HERO SLUT --> 
+
+        <!-- SEKTION: MISSION START-->
+        <section id="mission">
+        <div class="sektion--tekst"> <!-- START: Container for sektion -->
+		    <h2>
+				 Vores mission
+		    </h2>   
+                <p>Tæt på DK gør det nemt at finde og booke lokale oplevelser og ophold i Danmark.</p>
+
+            <h3>Vores værdier</h3>
+                <ul>
+                    <li>Bæredygtighed: Korte afstande, lokale værter = gode oplevelser til lave priser</li>
+                    <li>Nærvær: tid med dem du har kær, i det land du holder af</li>
+                    <li>Tryghed: Klar information og ingen skjulte gebyrer</li>
+                </ul>
+
+		</div><!-- /SLUT: Container for sektion -->
+        </section>
+        <!-- /SEKTION: MISSION SLUT --> 
+
+		<!-- TEAM START -->
+        <section class="team">
+            <div class="sektion">
+                <h2 style="text-align:center">Vores team</h2>
+
+                <div class="kolonner">
+                <figure>
+                    <img src="img/team-karla.jpg" alt="Karla Andersen" width="96" height="96" loading="lazy">
+                    <figcaption>
+                        <strong>Karla Andersen</strong><br>
+                         Bogholder
+                    </figcaption>
+                </figure>
+
+                 <figure>
+                    <img src="img/team-naya.jpg" alt="Naya Petersen" width="96" height="96" loading="lazy">
+                    <figcaption>
+                        <strong>Naya Petersen</strong><br>
+                        Direktør
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="img/team-jonas.jpg" alt="Jonas Fogh" width="96" height="96" loading="lazy">
+                    <figcaption>
+                        <strong>Jonas Fogh</strong><br>
+                        Marketing
+                    </figcaption>
+                </figure>
+                </div>
+                        <!-- Kontakt-knap-->
+                 <div class="sektion__cta">
+                      <a class="knap--cta" href="mailto:hej@taetpaa.dk">Kontakt os</a>
+                </div>
+    
+            </div>
+        </section>
+        <!-- /TEAM SLUT -->
+
+
+         <!-- /KONTAKT SLUT --> 
+
+    </main>
+    <!-- /INDHOLD SLUT --> 
+
+
+    <!-- FOOTER START --> 
+    <footer class="footer"> <!-- Footer bruges i bunden af en side til at vise det med småt: Kontaktinfo, copyrights og sekundær navigation, som f.eks. links til forretningsbetingelser -->
+    <div>
+		<div class="kolonner"> <!-- START: Kolonner i footer -->
+			<section>
+				<h2> <!-- Overskrift-->
+					Tæt på DK ApS
+				</h2>
+				<address>  
+					Albertslundgade 97
+                    <br> <!-- Linjeskift-->
+                    5400 Brøndby
+					<br>
+                    <a href="tel:+4552789847">+ 45 5278 9847</a>
+                    <br> 
+					<a href="mailto:hej@taetpaa.dk">hej@taetpaa.dk</a>
+                    <br> 
+                    CVR: 12345678
+                </address>
+			</section>
+			<nav>
+				<h2> <!-- Overskrift-->
+					Om Tæt på DK
+				</h2>
+				<ul>
+					<li>
+						<a href="om-os.html">
+						Om os
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Kontakt
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						FAQ
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Vilkår og betingelser
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Persondatapolitik
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Cookieindstillinger
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<section>
+				<h2> <!-- Overskrift-->
+					Find os
+				</h2>
+				<ul>
+					<li>
+						<a href="#">
+						Facebook
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Instagram
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Trustpilot
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Nyhedsbrev
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div> <!-- /SLUT: Kolonner i footer -->
+		<p>
+			© 2025 Tæt på DK
+		</p>
+	</div>   
+        
+
+    </footer>
+    <!-- /FOOTER SLUT --> 
+
 </body>
+<!-- /BODY SLUT -->
+ 
 </html>

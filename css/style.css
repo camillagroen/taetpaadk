@@ -353,6 +353,21 @@ img{
   display: block;
 }
 
+ /* --------------------------------------------------------
+ - TEAM
+ ---------------------------------------------------------- */
+
+/* Rund avatar og centreret tekst */
+.team figure{ text-align: center; margin: 0; }
+.team img{
+  width: 196px; height: 196px;
+  border-radius: 50%;      /* rund */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto .5rem;    /* centrer billede, lidt luft under */
+}
+.team figcaption{ color: #555; line-height: 1.2; }
+
   
  /* --------------------------------------------------------
  - FOOTER OG SLUTNAVIGATION

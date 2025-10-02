@@ -20,7 +20,7 @@
  - GENERELLE INDSTILLINGER FOR SIDEN
  ---------------------------------------------------------- */
 
-/* Alt under * resetter universelle indstillinger. Bør bruges sparsomt for ikke at gøre designet tungt og clunky */
+/* Alt under * resetter universelle indstillinger. Bør bruges sparsomt. */
 
 * {
   box-sizing: border-box;          /* Gør padding/border forudsigelige */
@@ -29,7 +29,7 @@
 
 /* Alt under html indstiller sidens adfærd  */
 html {
-  font-size: 175%;                 /* Gør tekststørrelsen skalerbar for accessibility-indstillinger, ideelt for den ældre målgruppe. */
+  font-size: 125%;                 /* Justerer relativ tekstørrelse på al tekst fra ét sted */
   scroll-behavior: smooth;         /* Sikrer rolig scrolling til ankerlinks på siden */
 }
 
@@ -47,20 +47,12 @@ body {
 
 /* Indstillinger for overskrifter */
 h1, h2, h3, h4, h5, h6{
-  line-height: 1.2; /* Højde på linje */
   font-weight: 700; /* Gør teksten fed */
   margin: 0.8rem 0; /* Tilføjer lidt luft før og efter */
 }
-h1 { font-size: 2.75rem; }     
-h2 { font-size: 2rem; }   
-h3 { font-size: 1.5rem; }   
-h4 { font-size: 1.25rem; }  
-h5 { font-size: 1.20rem; }  
-h6 { font-size: 1.1rem; }      
 
 /* Indstillinger for brødtekst */
 p, li{
-  font-size: 1rem;           /* Standard tekststørrelse */
   margin: 0.8rem 0;          /* Tilføjer lidt luft før og efter */
 }
 
@@ -70,11 +62,6 @@ a {
 }
 a:hover, a:focus {
   text-decoration: none;     /* Fjerner understregning af link ved hover/fokus  */
-}
-
-/* Juster tekststørrelse på større skærme  */
-@media (min-width: 768px) {
-  html { font-size: 125%; }  
 }
 
 /* Bryd meget lange ord op, hvis de fylder mere end deres containers bredde */
@@ -183,7 +170,7 @@ img{
   background-image: url('../img/hero-billede.jpg');  /* Kalder på baggrundsbillede */
   background-size: cover;                   /* Dækker hele området m. baggrunden */
   background-position: center;              /* Centrer baggrund */
-  background-color: rgba(0, 0, 0, 0.2);   /* Sætter baggrund til 20% sort */
+  background-color: rgba(0, 0, 0, 0.3);   /* Sætter baggrund til 20% sort */
   background-blend-mode: multiply;          /* Blender baggrundsfarven med baggrundsbilledet */
   min-height: 70vh;              /* Sætter minimumhøjde på hero til 70% af viewport */
   display: flex;                 /* Gør hero til flex-container og muliggør positionering */
@@ -194,10 +181,12 @@ img{
 .hero h1{
   color: #ffffff;              /* Overskrift farve: kridhvid */
   font-weight: 900;              /* Gør teksten tyk */
+  font-size: 3rem;              /* Tekststørrelse på overskrift i hero */
 }
 .hero p{
   color: #F6F3E9;              /* ben-hvid brødtekst */;
   font-weight: 500;              /* Gør teksten tyk */
+  font-size: 1.25rem;            /* Tekststørrelse på brødtekst i hero */
 }
 
 /* Knap-gruppe i hero */
@@ -235,11 +224,12 @@ img{
   margin: 0 0;               /* Bestemmer luft mellem listeelementer */
 }
 .footer h2 {
-  font-size: 1.2rem;         /* Størrelse på overskrift i footer */
+  font-size: 1.1rem;         /* Størrelse på overskrift i footer */
   margin-bottom: 1rem;       /* Luft under overskrift i footer */
 }
-footer address{ 
-  font-style: normal; 
+.footer address{ 
+  font-style: normal;         /* Fjerner kursiv på address element */
 }
+
 
 

@@ -1,11 +1,354 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
+<!---------------------------------------------------------- 
+ -  Destinationsside på TÆT PÅ DK 
+ ---------------------------------------------------------->
+
+<!DOCTYPE html> <!-- Type af dokument  -->
+<html lang="da"> <!-- Sprog på siden -->
+
+<!-- HEAD START -->
+<head> <!-- Head er alt, som browseren har brug for at vide, som brugeren ikke skal se -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinationsside</title>
-</head>
-<body>
     
+    <link rel="stylesheet" href="css/style.css"> <!-- Kalder på eksternt stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Kalder på ekstern Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <title>Tæt på DK – Destination</title> <!-- Titel i browserfanen -->
+    
+</head>
+<!-- /HEAD SLUT -->
+
+<!-- BODY START -->
+<body> <!-- Body er alt, som brugeren skal se i browseren -->
+    
+    <!-- HEADER START -->
+    <header> <!-- Header repræsenterer det øverste element i et HTML-dokument, typisk banner med navigation -->
+        <nav class="top-nav"> <!-- Nav repræsenterer navigationen på siden -->
+			<a href="index.html">
+			<img class="top-nav__logo" src="img/logo.png" alt="Tæt på DK">
+			</a>
+			
+			<details class="burger-details">  <!-- Details/summary brugt til at opnå burgermenu-funktion -->
+				<summary class="burger-summary">
+				☰ 
+				</summary>
+				<ul>
+					<li>🔐 
+						<a href="#">
+						Log ind
+						</a>
+					</li>
+					<li>🌿 
+						<a href="#">
+						Oplevelser
+						</a>
+					</li>
+					<li>🛏️ 
+						<a href="#">
+						Ophold
+						</a>
+					</li>
+					<li>🏷️ 
+						<a href="#">
+						Aktuelle tilbud
+						</a>
+					</li>
+					<li>👥 
+						<a href="om-os.html">
+						Om os
+						</a>
+					</li>
+				</ul>
+			</details>
+        </nav>
+    </header> 
+    <!-- /HEADER SLUT --> 
+
+    <!-- INDHOLD START --> 
+    <main> <!-- Hovedindholdet på siden, uden f.eks. header, menu og footer -->
+
+        <!-- SEKTION: HERO START --> 
+        <section class="hero" style="background-image:url('img/ophold-skov.jpg')"> <!-- Sæt hero-billede for destinationsside -->
+            <div class="sektion"> <!-- Div omfavner indhold som vi gerne vil have stylet/positioneret på en bestemt måde --->
+                <h1> <!-- H1 er hovedoverskriften som vises på siden, max. EN H1 per side --->
+                Skovhytte ved Møns Klint
+                </h1> 
+            
+                <p> <!-- P=parapgraf. Bruges til at omfavne og dele brødtekst op i klumper, "paragrafer" --->
+                1 overnatning i Premium Skovhytte med eller uden spa inkl. bobler, vin og tapas m.m.
+                </p>
+
+                <div class="hero__ctas"> <!-- DIV til styling og positionering af de to CTA-knapper -->
+                    <p>
+                  Fra 700 kr. per nat for to personer
+                    </p>
+                    <a class="knap--cta" href="#">Book nu</a>
+                </div> <!-- /SLUT: Div CTA-knapper -->
+
+            </div> <!-- /SLUT: Container for hero-indhold -->
+        </section>
+        <!-- /SEKTION: HERO SLUT --> 
+
+        
+
+        <!-- SEKTION: DESTINATIONSBESKRIVELSE START-->
+        <section id="Destinationsbeskrivelse">
+        <div class="sektion"> <!-- START: Container for sektion -->
+		        <h2> <!-- Overskrift -->
+			    Skovhytte ved Møns Klint
+		        </h2>
+                
+                <p>Turen går til Sydsjælland – nærmere bestemt Møns Klint, hvor I bliver budt velkommen i naturskønne omgivelser tæt på både skov og hav. Her finder I roen midt i den UNESCO-beskyttede natur, og I kan se frem til et ophold, der kombinerer komfort med enestående oplevelser i landskabet omkring klinten.</p>
+
+                    <h3>Særligt for dette ophold</h2>
+                        <ul>
+                            <li>Ophold i Premium skovhytte midt i naturen ved Møns Klint – kan bookes med egen udendørs spa på terrassen</li>
+                            <li>Inkl. bobler, tapas, 1 flaske vin og frisk morgenbrød</li>
+                            <li>Unik beliggenhed med adgang til nogle af Danmarks smukkeste vandreruter gennem Klinteskoven og langs Østersøen</li>
+                        </ul>
+
+                    <h3>Opholdet inkluderer</h3>
+                        <ul>
+                            <li>1 overnatning i Premium Skovhytte med eller uden egen udendørs spa</li>
+                            <li>Opredte senge og håndklæder</li>
+                            <li>1 flaske bobler</li>
+                            <li>Tapas for 2 personer</li>
+                            <li>1 flaske rødvin, hvidvin eller rosé</li>
+                            <li>Morgenbrød (rundstykker + kage)</li>
+                            <li>Forbrug af el og vand samt slutrengøring</li>
+                        </ul>
+
+                    <h3>Om hytterne</h3>
+                    <p>I skal bo i en nyopført Premium Skovhytte, der er helårsisoleret og moderne indrettet med varmepumpe. Hytten har et lyst opholdsrum med siddeområde, tv, spiseplads og køkken med ovn, opvaskemaskine, køleskab/fryser og service. Der er to separate soveværelser samt badeværelse med bruseniche.</p>
+                    <p>Fra terrassen – og særligt fra jeres eventuelle udendørs spa – kan I nyde roen fra Klinteskoven, fuglesang og den friske havluft.</p>
+
+                    <h3>Om området</h3>
+                    <p>Området ved Møns Klint er noget af Danmarks mest spektakulære natur. Fra hytten kan I hurtigt bevæge jer ud på de berømte vandreruter i Klinteskoven, tage turen ned ad trappen til stranden under klinten eller besøge <strong>GeoCenter Møns Klint</strong>, der formidler områdets dramatiske historie.</p>
+                    <p>Vil I lidt længere omkring, kan I opleve <strong>Møns mørke nattehimmel</strong>, som er udnævnt til Dark Sky Park – perfekt til stjernekiggeri. Desuden ligger hyggelige Stege kun en kort køretur væk med caféer, restauranter og små butikker.</p>
+
+                    <h3>Praktisk information</h3>
+                    <p>Opholdet kan benyttes med ankomst fra den 23. september til og med den 1. november 2025 og igen fra den 1. marts til og med den 4. juli 2026.</p>
+                    <p>Vær opmærksom på, at opholdet ikke kan bruges i weekender i forbindelse med helligdage.<br> Der er et begrænset antal ophold til salg.</p>
+                    <p><strong>Tjek ind:</strong> fra kl. 15.00<br>
+                    <strong>Tjek ud:</strong> senest kl. 10.00</p>
+                    <p></p><strong>Bemærk:</strong> Når opholdet er booket, kan det ikke afbestilles.<br>
+                    <strong>Tæt på DK</strong> er kun formidler af dette tilbud.</p>
+
+            <div class="sektion__cta"> <!-- START: Container til positionering af CTA -->
+                <h2>Pris: fra 700 kr. per nat for to personer</h2>
+			    <a class="knap--cta" href="#"><!-- CTA-knap for sektionen -->
+				Book nu
+			    </a> 
+		    </div><!-- /SLUT: Container til positionering af CTA -->
+            
+        </div><!-- /SLUT: Container for sektion -->
+        </section>
+        <!-- SEKTION: DESTINATIONSBESKRIVELSE SLUT --> 
+
+        <!-- SEKTION: MULTIMEDIA START --> 
+            <!-- Her kommer et galleri med video + billeder --> 
+        <!-- /SEKTION: MULTIMEDIA SLUT --> 
+
+
+        <!-- SEKTION: ANMELDELSER AF DESTINATION START-->
+        <section>  
+        <div class="sektion"><!-- START: Container for sektion -->
+		    <h2> <!-- Overskrift -->
+		    Anmeldelser
+		    </h2>
+		    <p>
+		    <blockquote>
+                    <h3>Absolut topklasse</h3>
+                    <p>Helt vidunderligt ophold midt i skoven – fredeligt og tæt på Møns Klint. Hytten var super lækker og ren, vi nød virkelig tapas og vin i spaen. Vi kommer helt sikkert igen.
+                    <!-- SEKTION: BILLEDE/AVATAR --> <p>– Lene, anmeldt september 2025</p>
+                    </blockquote>
+                
+                    <blockquote>
+                    <h3>Den skønneste udsigt</h3>
+                    <p>En unik oplevelse! Naturen, stjernehimlen og komforten i hytten gjorde dette til en af vores bedste miniferier nogensinde.</p>
+                    <!-- SEKTION: BILLEDE/AVATAR --> <p>– Karen, anmeldt august 2025</p>
+                    </blockquote>
+
+                    <blockquote><p>
+                    <h3>Fantastisk beliggenhed.</h3>
+                    <p>Vi havde lejet en luksus hytte med spa og var yderst tilfredse. Rengøring og service var i top, fantastisk beliggenhed med udsigt skoven og vandet mellem trækronerne. Der var alt, hvad vi havde brug for i hytten.</p>
+                    <!-- SEKTION: BILLEDE/AVATAR --> <p>– Knud, anmeldt september 2025.</p>
+                    </blockquote></p>
+
+            <div class="sektion__cta">  <!-- START: Container til positionering af CTA -->
+                <h2>Pris: fra 700 kr. per nat for to personer</h2>
+			    <a class="knap--cta" href="#"> <!-- CTA-knap for sektionen -->
+				Book nu
+			    </a>
+		    </div>  <!-- /SLUT: Container til positionering af CTA -->
+
+	    </div> <!-- /SLUT: Container for sektion -->
+        </section>
+        <!-- /SEKTION: ANMELDELSER AF DESTINATION SLUT-->
+
+
+        <!-- SEKTION: ANDRE OPHOLD START-->
+        <section id="ophold">
+        <div class="sektion"> <!-- START: Container for sektion -->
+            <h2> <!-- Overskrift -->
+			Andre populære ophold
+		    </h2>
+
+            <div class="kolonner"> <!-- START: Kolonner til galleri med product cards -->
+            <!-- PRODUKT 1 --> 
+			<article class="product-card">
+				<img src="img/ophold-bornholm.jpg" alt="BnB på Bornholm"> <!-- Produktbillede -->
+				<h3> <!-- Underoverskrift -->
+					Bornholm
+				</h3>
+				<p>  <!-- Brødtekst med pris/beskrivelse -->
+					Fra 900 kr. per nat for to personer
+				</p>
+				<a class="knap" href="#"> <!-- Produkt-knap -->
+					Se tilbud
+				</a>
+			</article>
+			
+            <!-- PRODUKT 2 --> 
+            <article class="product-card">
+				<img src="img/ophold-shelter.jpg" alt="Overnatning i shelter"> <!-- Produktbillede -->
+				<h3> <!-- Underoverskrift -->
+					Overnatning i shelter
+				</h3>
+				<p>  <!-- Brødtekst med pris/beskrivelse -->
+					Fra 200 kr. per person inkl. guide
+				</p>
+				<a class="knap" href="#"> <!-- Produkt-knap -->
+					Se tilbud
+				</a>
+			</article>
+			
+            <!-- PRODUKT 3 --> 
+             <article class="product-card">
+				<img src="img/ophold-skov.jpg" alt="Skovhytte Møns Klint"> <!-- Produktbillede -->
+				<h3> <!-- Underoverskrift -->
+					Skovhytte ved Møns Klint
+				</h3>
+				<p>  <!-- Brødtekst med pris/beskrivelse -->
+					Fra 700 kr. per nat for to personer
+				</p>
+				<a class="knap" href="#"> <!-- Produkt-knap -->
+					Se tilbud
+				</a>
+			</article>
+		    </div> <!-- /SLUT: Kolonner til galleri med product cards -->
+
+		    <div class="sektion__cta">  <!-- START: Container til positionering af CTA -->
+			    <a class="knap--cta" href="#"> <!-- CTA-knap for sektionen -->
+				Se alle ophold
+			    </a>
+		    </div>  <!-- /SLUT: Container til positionering af CTA -->
+
+	    </div><!-- /SLUT: Container for sektion -->
+        </section>
+        <!-- /SEKTION: ANDRE OPHOLD SLUT --> 
+
+    </main>
+    <!-- /INDHOLD SLUT --> 
+
+    <!-- FOOTER START --> 
+    <footer class="footer"> <!-- Footer bruges i bunden af en side til at vise det med småt: Kontaktinfo, copyrights og sekundær navigation, som f.eks. links til forretningsbetingelser -->
+    <div>
+		<div class="kolonner"> <!-- START: Kolonner i footer -->
+			<section>
+				<h2> <!-- Overskrift-->
+					Tæt på DK ApS
+				</h2>
+				<address>  
+					Albertslundgade 97
+                    <br> <!-- Linjeskift-->
+                    5400 Brøndby
+					<br>
+                    <a href="tel:+4552789847">+ 45 5278 9847</a>
+                    <br> 
+					<a href="mailto:hej@taetpaa.dk">hej@taetpaa.dk</a>
+                    <br> 
+                    CVR: 12345678
+                </address>
+			</section>
+			<nav>
+				<h2> <!-- Overskrift-->
+					Om Tæt på DK
+				</h2>
+				<ul>
+					<li>
+						<a href="om-os.html">
+						Om os
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Kontakt
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						FAQ
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Vilkår og betingelser
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Persondatapolitik
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Cookieindstillinger
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<section>
+				<h2> <!-- Overskrift-->
+					Find os
+				</h2>
+				<ul>
+					<li>
+						<a href="#">
+						Facebook
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Instagram
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Trustpilot
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						Nyhedsbrev
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div> <!-- /SLUT: Kolonner i footer -->
+		<p>
+			© 2025 Tæt på DK
+		</p>
+	</div>   
+        
+
+    </footer>
+    <!-- /FOOTER SLUT --> 
+
 </body>
+<!-- /BODY SLUT -->
+ 
 </html>

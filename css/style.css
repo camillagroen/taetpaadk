@@ -212,7 +212,7 @@ img{
 /* Product cards: til at vise tilbud som separate produkter */
 .product-card{
   background: #F6F3E9;        /* Baggrundsfarve: ben-hvid */
-  border: 1px solid #B6AF8C;  /* Kant-farve: løv-grøn */
+  border: 0px;                  /* Ingen kant */
   border-radius: .5rem;         /* Afrundede hjørner */
   padding: 1rem;                /* Indvendig afstand */
   text-align: center;           /* Centrerer inhold */
@@ -272,7 +272,7 @@ img{
 }
 
 .prislinje p{
-  color: #F6F3E9;              /* Ben-hvid brødtekst */;
+  color: #ffffff;              /* Kridhvid brødtekst */;
   font-weight: 500;              /* Gør teksten tyk */
   font-size: 1.25rem;            /* Tekststørrelse på brødtekst i hero */
   margin: 0 0 .5rem;             /* Justerer margin i prissektion */

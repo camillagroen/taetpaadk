@@ -41,6 +41,62 @@ body {
   background: #ffffff;           /* Kridhvid som standard baggrundsfarve */
 }
 
+
+/* --------------------------------------------------------
+ - HEADER OG TOPNAVIGATION
+ ---------------------------------------------------------- */
+
+header {
+  top: 0;                     /* Placering i toppen af siden. Muliggør sticky */
+  position: sticky;           /* Holder header i toppen ved scroll */
+  background: #F6F3E9;      /* Header baggrundsfarve: ben-hvid */
+}
+header a {
+  color: inherit;                     /* Header link farve: Arver fra omgivende tekst */
+  text-decoration: none;              /* Fjerner understregning af link */
+}
+header a:hover, header a:focus {
+  text-decoration: underline;         /* Understreger link ved hover/fokus */
+}
+header ul {
+  list-style: none;                   /* Fjerner standard punktopstilling */
+  text-align: center;                 /* Centrerer menupunkterne */
+}
+
+ .top-nav {
+  display: flex;                 /* Lægger logo til (venstre) og burger (højre) på samme række */
+  padding: 1rem 1rem;            /* Tilføjer lidt indre luft i alle sider af headeren */
+}
+.top-nav li {
+  margin: .5rem 0;               /* Justerer luft mellem menupunkterne */
+}
+.top-nav__logo {
+  width: 40px;                   /* Fast bredde på logo */
+  height: 40px;                  /* Fast højde på logo */
+}
+.burger-details{
+  margin-left: auto;             /* Skubber burgerikonet helt til højre */
+}
+
+.burger-details[open] ul{   
+  width: 100vw;                       /* Fylder hele viewport width */
+  margin-inline: calc(100% - 100vw);  /* Holder burgerikonet til højre, når burger åbnes og åbner menu nedender */
+  padding-top: 1.5rem;                /* Tilføjer lidt luft over menupunkterne */
+  padding-bottom: 0.5rem;             /* Tilføjer lidt luft under menupunkterne */
+}
+
+.burger-summary{
+  cursor: pointer;            /* Viser at burgeren er klikbar ved at ændre cursor på desktop */
+  font-size: 2rem;            /* Burgerikonets størrelse */
+  line-height: 0.8;           /* Mindsker luft omkring ikonet */
+  display: block;             /* Fjerner standard trekantikon */
+}
+.burger-summary::-webkit-details-marker { display: none; } /* Skjuler standard trekantikon */
+
+/* Justerer scroll-margin, så header ikke dækker indhold, når man klikker på ankerlinks */
+#oplevelser, #ophold, #tilbud { scroll-margin-top: 80px; }
+
+
 /* --------------------------------------------------------
  - TEKST
  ---------------------------------------------------------- */
@@ -122,12 +178,23 @@ img{
  - BEHOLDERE: SEKTIONER, KOLONNER OG PRODUCT CARDS
  ---------------------------------------------------------- */
 
-/* Sektion: Sætter en max bredde og centrerer alt inde i sektionen */
+/* Sektion: Sætter en max bredde for sektioner */
 .sektion{
   width: min(100%, 1200px);   /* Maks 1200px, ellers 100% */
   margin-inline: auto;        /* Centrerer sektion */
   padding: 2rem 1rem;         /* Luft over og under sektion */
 }
+.sektion--tekst{
+  width: min(100%, 900px);   /* Maks 900px, ellers 100% */
+  margin-inline: auto;        /* Centrerer sektion */
+  padding: 2rem 1rem;         /* Luft over og under sektion */
+}
+.sektion--hero{
+  width: min(100%, 900px);   /* Maks 900px, ellers 100% */
+  margin-inline: auto;        /* Centrerer sektion */
+  padding: 1rem 1rem;         /* Luft over og under sektion */
+}
+
 .sektion__cta{ margin-top: 1rem; text-align: center; }   /* Centrerer CTA-knap i bunden af sektioner */   
 
 /* Kolonner: Lav 1 kolonne på mobil, men 3 på desktop */
@@ -157,69 +224,16 @@ img{
   border-radius: .5rem;    /* Giver billederne afrundede hjørner */
 }
 
-/* --------------------------------------------------------
- - HEADER OG TOPNAVIGATION
- ---------------------------------------------------------- */
-
-header {
-  top: 0;                     /* Placering i toppen af siden. Muliggør sticky */
-  position: sticky;           /* Holder header i toppen ved scroll */
-  background: #F6F3E9;      /* Header baggrundsfarve: ben-hvid */
-}
-header a {
-  color: inherit;                     /* Header link farve: Arver fra omgivende tekst */
-  text-decoration: none;              /* Fjerner understregning af link */
-}
-header a:hover, header a:focus {
-  text-decoration: underline;         /* Understreger link ved hover/fokus */
-}
-header ul {
-  list-style: none;                   /* Fjerner standard punktopstilling */
-  text-align: center;                 /* Centrerer menupunkterne */
-}
-
- .top-nav {
-  display: flex;                 /* Lægger logo til (venstre) og burger (højre) på samme række */
-  padding: 1rem 1rem;            /* Tilføjer lidt indre luft i alle sider af headeren */
-}
-.top-nav li {
-  margin: .5rem 0;               /* Justerer luft mellem menupunkterne */
-}
-.top-nav__logo {
-  width: 40px;                   /* Fast bredde på logo */
-  height: 40px;                  /* Fast højde på logo */
-}
-.burger-details{
-  margin-left: auto;             /* Skubber burgerikonet helt til højre */
-}
-
-.burger-details[open] ul{   
-  width: 100vw;                       /* Fylder hele viewport width */
-  margin-inline: calc(100% - 100vw);  /* Holder burgerikonet til højre, når burger åbnes og åbner menu nedender */
-  padding-top: 1.5rem;                /* Tilføjer lidt luft over menupunkterne */
-  padding-bottom: 0.5rem;             /* Tilføjer lidt luft under menupunkterne */
-}
-
-.burger-summary{
-  cursor: pointer;            /* Viser at burgeren er klikbar ved at ændre cursor på desktop */
-  font-size: 2rem;            /* Burgerikonets størrelse */
-  line-height: 0.8;           /* Mindsker luft omkring ikonet */
-  display: block;             /* Fjerner standard trekantikon */
-}
-.burger-summary::-webkit-details-marker { display: none; } /* Skjuler standard trekantikon */
-
-/* Justerer scroll-margin, så header ikke dækker indhold, når man klikker på ankerlinks */
-#oplevelser, #ophold, #tilbud { scroll-margin-top: 80px; }
 
 /* --------------------------------------------------------
  - HERO
  ---------------------------------------------------------- */
 
 .hero{
-  background-image: url('../img/hero-billede.jpg');  /* Kalder på baggrundsbillede */
+  
   background-size: cover;                   /* Dækker hele området m. baggrunden */
   background-position: center;              /* Centrer baggrund */
-  background-color: rgba(0, 0, 0, 0.3);   /* Sætter baggrund til 20% sort */
+  background-color: rgba(0, 0, 0, 0.5);   /* Sætter baggrund til 50% sort */
   background-blend-mode: multiply;          /* Blender baggrundsfarven med baggrundsbilledet */
   min-height: 70vh;              /* Sætter minimumhøjde på hero til 70% af viewport */
   display: flex;                 /* Gør hero til flex-container og muliggør positionering */
@@ -230,10 +244,10 @@ header ul {
 .hero h1{
   color: #ffffff;              /* Overskrift farve: kridhvid */
   font-weight: 900;              /* Gør teksten tyk */
-  font-size: 3rem;              /* Tekststørrelse på overskrift i hero */
+  font-size: 3rem;               /* Tekststørrelse på overskrift i hero */
 }
 .hero p{
-  color: #F6F3E9;              /* ben-hvid brødtekst */;
+  color: #F6F3E9;              /* Ben-hvid brødtekst */;
   font-weight: 500;              /* Gør teksten tyk */
   font-size: 1.25rem;            /* Tekststørrelse på brødtekst i hero */
 }
@@ -246,6 +260,35 @@ header ul {
   flex-wrap: wrap;               /* Tillader knapper at bryde til ny linje på mindre skærme */
   margin: 1.5rem 0;              /* Luft over og under knap-gruppen */
 }
+
+ /* --------------------------------------------------------
+ - PRISLINJE
+ ---------------------------------------------------------- */
+
+.prislinje{
+  background: #324F3A;          /* Baggrundsfarve: skov-grøn */
+  color: #ffffff;               /* Tekstfarve: hvid, for kontrast */
+  text-align: center;             /* center indhold på mobil */
+}
+
+.prislinje p{
+  color: #F6F3E9;              /* Ben-hvid brødtekst */;
+  font-weight: 500;              /* Gør teksten tyk */
+  font-size: 1.25rem;            /* Tekststørrelse på brødtekst i hero */
+  margin: 0 0 .5rem;             /* Justerer margin i prissektion */
+}
+
+@media (min-width: 768px){  /* På laptop: Vis pris og knap i én række med luft imellem */
+  .prislinje > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;}
+}
+
+  
+  
 
  /* --------------------------------------------------------
  - FOOTER OG SLUTNAVIGATION

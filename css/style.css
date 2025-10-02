@@ -208,6 +208,9 @@ header ul {
 }
 .burger-summary::-webkit-details-marker { display: none; } /* Skjuler standard trekantikon */
 
+/* Justerer scroll-margin, så header ikke dækker indhold, når man klikker på ankerlinks */
+#oplevelser, #ophold, #tilbud { scroll-margin-top: 80px; }
+
 /* --------------------------------------------------------
  - HERO
  ---------------------------------------------------------- */

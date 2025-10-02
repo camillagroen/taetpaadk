@@ -247,14 +247,14 @@ img{
   font-size: 3rem;               /* Tekststørrelse på overskrift i hero */
 }
 .hero p{
-  color: #F6F3E9;              /* Ben-hvid brødtekst */;
+  color: #F6F3E9;              /* Ben-hvid brødtekst */
   font-weight: 500;              /* Gør teksten tyk */
   font-size: 1.25rem;            /* Tekststørrelse på brødtekst i hero */
 }
 
 /* Knap-gruppe i hero */
 .hero__ctas{
-  display: flex;                 /* Gør knap-gruppe til flex-containe og muliggør positionering */
+  display: flex;                 /* Gør knap-gruppe til r og muliggør positionering */
   justify-content: center;       /* Centrerer knapperne */
   gap: .75rem;                   /* Afstand mellem knapperne */
   flex-wrap: wrap;               /* Tillader knapper at bryde til ny linje på mindre skærme */
@@ -301,10 +301,9 @@ img{
   -webkit-overflow-scrolling: touch;   /* Swipe på iOS */
 }
 
-/* Tilpas billedstørrelse til skæm */
+/* Tilpas billedstørrelse til skærm */
 .galleri ul li{
   flex: 0 0 80%;            /* Mobil: vis ét stort billede ad gangen (ca. 80% af bredden) */
-  scroll-snap-align: start; /* Starter billedgalleri ved starten af første billede */
 }
 @media (min-width: 768px){
   .galleri ul li{
@@ -326,7 +325,7 @@ img{
  ---------------------------------------------------------- */
  
 .anmeldelser{
-  background: #F6F3E9;          /* Baggrundsfarve: skov-grøn */
+  background: #F6F3E9;          /* Baggrundsfarve: ben-hvid */
   
 }
 

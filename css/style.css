@@ -152,9 +152,9 @@ img{
   border-radius: .5rem;             /* Afrundede hjørner på knap */
 }
 .knap:hover, .knap:focus, .knap:active {  /* Aktiv tilstand */
-  background-color: #728999;      /* Baggrundsfarve på knap: himmel-blå */
-  color: #ffffff;                 /* Knap tekstfarve: kridhvid */
-  border-color: #728999;          /* Kant-farve: himmel-blå */
+  background-color: #B6AF8C;      /* Baggrundsfarve på knap: himmel-blå */
+  color: #000000;                 /* Knap tekstfarve: kridhvid */
+  border-color: #B6AF8C;          /* Kant-farve: himmel-blå */
 } 
 
  /* CTA-KNAPPER */
@@ -287,7 +287,39 @@ img{
     text-align: left;}
 }
 
-  
+
+ /* --------------------------------------------------------
+ - GALLERI
+ ---------------------------------------------------------- */
+
+/* Selve galleriet (styling af listewrapper ul) */
+.galleri ul{
+  list-style: none;                    /* Fjern punktopstilling */
+  display: flex;                       /* Muliggør positionering */
+  gap: .75rem;                         /* Afstand mellem billeder */
+  overflow-x: auto;                    /* Gør listen vandret scroll-bar */
+  -webkit-overflow-scrolling: touch;   /* Swipe på iOS */
+}
+
+/* Tilpas billedstørrelse til skæm */
+.galleri ul li{
+  flex: 0 0 80%;            /* Mobil: vis ét stort billede ad gangen (ca. 80% af bredden) */
+  scroll-snap-align: start; /* Starter billedgalleri ved starten af første billede */
+}
+@media (min-width: 768px){
+  .galleri ul li{
+      flex: 0 0 30%;        /* Desktop: Viser 3-4 ad gangen (ca. 30% af bredden) */
+  }
+}
+
+/* Billedformatering */
+.galleri img{
+  width: 100%;          /* Fyld ud til 100% i bredden */
+  aspect-ratio: 4 / 3;  /* Sørger for ens højde-bredde-forhold */
+  object-fit: cover;    /* Udfyld billedrammen uden at forvrænge billedet */
+  border-radius: .5rem; /* Bløde hjørner på billeder */
+}
+
 
  /* --------------------------------------------------------
  - ANMELDELSER

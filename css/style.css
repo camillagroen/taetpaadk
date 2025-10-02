@@ -167,36 +167,46 @@ header {
   background: #F6F3E9;      /* Header baggrundsfarve: ben-hvid */
 }
 header a {
-  color: inherit;           /* Header link farve: Arver fra omgivende tekst */
-  text-decoration: none;    /* Fjerner understregning af link */
+  color: inherit;                     /* Header link farve: Arver fra omgivende tekst */
+  text-decoration: none;              /* Fjerner understregning af link */
 }
 header a:hover, header a:focus {
-  text-decoration: underline; /* Understreger link ved hover/fokus */
+  text-decoration: underline;         /* Understreger link ved hover/fokus */
+}
+header ul {
+  list-style: none;                   /* Fjerner standard punktopstilling */
+  text-align: center;                 /* Centrerer menupunkterne */
 }
 
-
-
  .top-nav {
-  display: flex;                   /* Lægger logo til (venstre) og burger (højre) på samme række */
+  display: flex;                 /* Lægger logo til (venstre) og burger (højre) på samme række */
   padding: 1rem 1rem;            /* Tilføjer lidt indre luft i alle sider af headeren */
 }
 .top-nav li {
-  margin: .5rem 0;          /* Justerer luft mellem menupunkterne */
+  margin: .5rem 0;               /* Justerer luft mellem menupunkterne */
 }
 .top-nav__logo {
-  width: 40px;                /* Fast bredde på logo */
-  height: 40px;               /* Fast højde på logo */
+  width: 40px;                   /* Fast bredde på logo */
+  height: 40px;                  /* Fast højde på logo */
+}
+.burger-details{
+  margin-left: auto;             /* Skubber burgerikonet helt til højre */
 }
 
-.burger-details{
-  margin-left: auto;          /* Skubber burgerikonet helt til højre */
-  
+.burger-details[open] ul{   
+  width: 100vw;                       /* Fylder hele viewport width */
+  margin-inline: calc(100% - 100vw);  /* Holder burgerikonet til højre, når burger åbnes og åbner menu nedender */
+  padding-top: 1.5rem;                /* Tilføjer lidt luft over menupunkterne */
+  padding-bottom: 0.5rem;             /* Tilføjer lidt luft under menupunkterne */
 }
+
 .burger-summary{
   cursor: pointer;            /* Viser at burgeren er klikbar ved at ændre cursor på desktop */
   font-size: 2rem;            /* Burgerikonets størrelse */
-  display: block;              /* Fjerner standard trekantikon */
+  line-height: 0.8;           /* Mindsker luft omkring ikonet */
+  display: block;             /* Fjerner standard trekantikon */
 }
+.burger-summary::-webkit-details-marker { display: none; } /* Skjuler standard trekantikon */
 
 /* --------------------------------------------------------
  - HERO

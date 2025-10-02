@@ -161,6 +161,42 @@ img{
  - HEADER OG TOPNAVIGATION
  ---------------------------------------------------------- */
 
+header {
+  top: 0;                     /* Placering i toppen af siden. Muliggør sticky */
+  position: sticky;           /* Holder header i toppen ved scroll */
+  background: #F6F3E9;      /* Header baggrundsfarve: ben-hvid */
+}
+header a {
+  color: inherit;           /* Header link farve: Arver fra omgivende tekst */
+  text-decoration: none;    /* Fjerner understregning af link */
+}
+header a:hover, header a:focus {
+  text-decoration: underline; /* Understreger link ved hover/fokus */
+}
+
+
+
+ .top-nav {
+  display: flex;                   /* Lægger logo til (venstre) og burger (højre) på samme række */
+  padding: 1rem 1rem;            /* Tilføjer lidt indre luft i alle sider af headeren */
+}
+.top-nav li {
+  margin: .5rem 0;          /* Justerer luft mellem menupunkterne */
+}
+.top-nav__logo {
+  width: 40px;                /* Fast bredde på logo */
+  height: 40px;               /* Fast højde på logo */
+}
+
+.burger-details{
+  margin-left: auto;          /* Skubber burgerikonet helt til højre */
+  
+}
+.burger-summary{
+  cursor: pointer;            /* Viser at burgeren er klikbar ved at ændre cursor på desktop */
+  font-size: 2rem;            /* Burgerikonets størrelse */
+  display: block;              /* Fjerner standard trekantikon */
+}
 
 /* --------------------------------------------------------
  - HERO

@@ -353,6 +353,12 @@ img{
   display: block;
 }
 
+/* Trustpilot-variant */
+.anmeldelser--trustpilot{
+  background: #B6AF8C;          /* Baggrundsfarve: løv-grøn */
+  
+}
+
  /* --------------------------------------------------------
  - TEAM
  ---------------------------------------------------------- */
